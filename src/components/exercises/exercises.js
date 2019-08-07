@@ -17,8 +17,7 @@ const testQuestionSample = {
   correct: 1
 };
 
-export default class Game extends React.Component {
-
+export default class Exercises extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,14 +25,14 @@ export default class Game extends React.Component {
     };
   }
 
-  render() {
-    const handleChange = (event, newValue) => {
-      const newState = JSON.parse(JSON.stringify(this.state));
-      newState.polygonSides = newValue;
-  
-      this.setState(newState);
-    };
+  handleChange(event, newValue) {
+    const newState = JSON.parse(JSON.stringify(this.state));
+    newState.polygonSides = newValue;
 
+    this.setState(newState);
+  };
+
+  render() {
     return (
       <div>
         <svg height={300} width={300} style={{ background: 'grey' }}>
@@ -52,7 +51,7 @@ export default class Game extends React.Component {
           marks
           min={3}
           max={30}
-          onChange={handleChange}
+          onChange={this.handleChange}
         />
         <TestQuestion
           question={testQuestionSample}
