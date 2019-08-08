@@ -12,16 +12,16 @@ const testQuestionSample = {
     { sides: 4, color: 'blue' },
     { sides: 5, color: 'blue' },
     { sides: 7, color: 'blue' },
-    { sides: 3, color: 'blue' }
+    { sides: 3, color: 'blue' },
   ],
-  correct: 1
+  correct: 1,
 };
 
 export default class Exercises extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      polygonSides: 3
+      polygonSides: 3,
     };
   }
 
@@ -30,18 +30,13 @@ export default class Exercises extends React.Component {
     newState.polygonSides = newValue;
 
     this.setState(newState);
-  };
+  }
 
   render() {
     return (
       <div>
         <svg height={300} width={300} style={{ background: 'grey' }}>
-          <Polygon
-            height={300} 
-            width={300} 
-            sides={this.state.polygonSides}
-            fill="blue"
-          />
+          <Polygon height={300} width={300} sides={this.state.polygonSides} fill="blue" />
         </svg>
         <Slider
           value={this.state.polygonSides}
@@ -53,9 +48,7 @@ export default class Exercises extends React.Component {
           max={30}
           onChange={(event, newValue) => this.handleChange(event, newValue)}
         />
-        <TestQuestion
-          question={testQuestionSample}
-        />
+        <TestQuestion question={testQuestionSample} />
       </div>
     );
   }

@@ -23,7 +23,6 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-
 const NavigationBar = withRouter(
   ({ history }) => {
     const classes = useStyles();

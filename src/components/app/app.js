@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -36,7 +36,7 @@ export default function App() {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/exercises" component={Exercises} />
       </Switch>
-      
+
       <Footer />
     </React.Fragment>
   );
