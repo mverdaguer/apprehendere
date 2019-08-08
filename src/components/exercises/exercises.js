@@ -51,7 +51,7 @@ export default class Exercises extends React.Component {
           marks
           min={3}
           max={30}
-          onChange={this.handleChange}
+          onChange={(event, newValue) => this.handleChange(event, newValue)}
         />
         <TestQuestion
           question={testQuestionSample}
