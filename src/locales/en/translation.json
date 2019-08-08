@@ -1,0 +1,12 @@
+{
+  "footer": {
+    "text": "Built with love by "
+  },
+  "navigation": {
+    "app-name": "Apprehendere",
+    "about": "About",
+    "exercises": "Excercises",
+    "dashboard": "Dashboard",
+    "login": "Login"
+  }
+}

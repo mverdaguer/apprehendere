@@ -4,11 +4,14 @@ import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
+import { useTranslation } from 'react-i18next';
 
 function MadeWithLove() {
+  const { t } = useTranslation();
+
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Built with love by '}
+      {t('footer.text')}
       <Link color="inherit" href="https://github.com/mverdaguer">
         Marc Verdaguer
       </Link>

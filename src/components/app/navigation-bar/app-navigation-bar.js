@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -25,6 +26,7 @@ const useStyles = makeStyles(theme => ({
 
 const NavigationBar = withRouter(({ history }) => {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <React.Fragment>
@@ -37,7 +39,7 @@ const NavigationBar = withRouter(({ history }) => {
             className={classes.toolbarTitle}
             onClick={() => history.push('/')}
           >
-            Apprehendere
+            {t('navigation.app-name')}
           </Typography>
           <nav>
             <Link
@@ -47,7 +49,7 @@ const NavigationBar = withRouter(({ history }) => {
               to="/exercises"
               className={classes.link}
             >
-              Exercises
+              {t('navigation.exercises')}
             </Link>
             <Link
               variant="button"
@@ -56,7 +58,7 @@ const NavigationBar = withRouter(({ history }) => {
               to="/dashboard"
               className={classes.link}
             >
-              Dashboard
+              {t('navigation.dashboard')}
             </Link>
             <Link
               variant="button"
@@ -65,11 +67,11 @@ const NavigationBar = withRouter(({ history }) => {
               to="/about"
               className={classes.link}
             >
-              About
+              {t('navigation.about')}
             </Link>
           </nav>
           <Button href="#" color="primary" variant="outlined" className={classes.link}>
-            Login
+            {t('navigation.login')}
           </Button>
         </Toolbar>
       </AppBar>
