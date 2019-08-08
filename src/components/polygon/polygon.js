@@ -5,7 +5,7 @@ const calculatePoints = (sides, radius) => {
     return;
   }
 
-  const angle = 2 * Math.PI / sides;
+  const angle = (2 * Math.PI) / sides;
 
   let result = '';
   for (let i = 1; i <= sides; i++) {
@@ -16,15 +16,15 @@ const calculatePoints = (sides, radius) => {
   }
 
   return result;
-}
+};
 
 export default class Polygon extends React.Component {
   render() {
-    const radius = Math.min(this.props.width, this.props.height) / 2;    
+    const radius = Math.min(this.props.width, this.props.height) / 2;
     const points = calculatePoints(this.props.sides, radius - 20);
 
     return (
-      <polygon 
+      <polygon
         points={points}
         fill={this.props.fill}
         transform={`translate(${radius}, ${radius})`}
@@ -33,5 +33,3 @@ export default class Polygon extends React.Component {
     );
   }
 }
-
-
